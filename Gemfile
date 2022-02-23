@@ -74,3 +74,4 @@ gem "sassc-rails"
 gem 'bootstrap', '~> 5.1.3'
 gem "haml-rails", "~> 2.0"
 gem "font-awesome-rails"
+gem 'simple_form'
