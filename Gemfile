@@ -73,7 +73,7 @@ end
 gem "sassc-rails"
 gem 'bootstrap', '~> 5.1.3'
 gem "haml-rails", "~> 2.0"
-gem "font-awesome-rails"
+gem "font-awesome-sass", "~> 5.12.0"
 gem 'simple_form'
 gem 'faker'
 gem 'devise'

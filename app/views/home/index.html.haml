@@ -1,11 +1,69 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.erb
+.jumbotron 
+  .display-4
+    What do you want to learn today?
 
-.fa.fa-flag 
-.fab.fa-amazon 
-= link_to root_path do 
-  .fa.fa-home 
+    .p-4 
 
-= link_to courses_path, class: 'btn btn-success' do 
-  .fa.fa-book
-  Course
+  .form-inline.my-2.my-lg-0
+    = form_tag(courses_path, method: :get) do 
+      .input-group 
+        = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form'
+        %span.input-group-append
+          %button.btn.btn-primary.btn-sm{:type => "submit"}
+            %span.fa.fa-search{"aria-hidden" => "true"}
+
+.p-4 
+
+.card-group 
+  .card.card-body 
+    %h1
+      .fa.fa-graduation-cap 
+    = Course.count
+    online courses 
+    .row 
+    Explore a veriety of fresh topics 
+  .card.card-body 
+    %h1
+      .fa.fa-chalkboard-teacher 
+    = Course.distinct.count(:user_id)
+    expert instructors 
+    .row 
+    Find the right instructor for you
+  .card.card-body 
+    %h1
+      .fa.fa-user-graduate
+    = User.count
+    active learners 
+    .row 
+    Join the knowledge sharing community 
+  .card.card-body 
+    %h1
+      .fa.fa-infinity
+    = Course.count
+    Lifetime access 
+    .row 
+    Learn on your schedule
+
+
+%hr
+%h2
+  Popular courses 
+.card-columns 
+  - @courses.each do |course|
+    = render 'courses/course', course: course 
+
+%hr
+%h2
+  Top rated courses 
+.card-columns 
+  - @courses.each do |course|
+    = render 'courses/course', course: course 
+
+%hr
+%h2
+  Latest courses 
+.card-columns 
+  - @latest_courses.each do |course|
+    = render 'courses/course', course: course 
+
+%hr
