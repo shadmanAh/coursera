@@ -3,6 +3,8 @@
     Activity 
     .badge.badge-info 
       = @activities.count
+
+%p
 %ul.list-group
   - @activities.each do |activity|
     %li.list-group-item
