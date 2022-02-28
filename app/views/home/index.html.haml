@@ -7,7 +7,7 @@
   .form-inline.my-2.my-lg-0
     = form_tag(courses_path, method: :get) do 
       .input-group 
-        = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form'
+        = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm', style: 'width: 250px'
         %span.input-group-append
           %button.btn.btn-primary.btn-sm{:type => "submit"}
             %span.fa.fa-search{"aria-hidden" => "true"}
