@@ -80,3 +80,5 @@ gem 'devise'
 gem 'friendly_id', '~> 5.4.0'
 gem 'ransack'
 gem 'public_activity', github: 'chaps-io/public_activity', branch: 'master'
+gem "rolify"
+gem "pundit"
