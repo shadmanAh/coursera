@@ -4,6 +4,7 @@
     .badge.badge-info 
       = @courses.count
 %p
+
 .row 
   .col-md-2 
     .form-inline
@@ -28,9 +29,10 @@
       = link_to courses_path, class: 'btn btn-sm btn-secondary' do 
         .fa.fa-sync 
   .col-md-10
-    .card-columns 
-      - @courses.each do |course|
-        = render 'courses/course', course: course 
+    .col-lg-6
+      .card-columns 
+        - @courses.each do |course|
+          = render 'courses/course', course: course 
 
 %br
 
