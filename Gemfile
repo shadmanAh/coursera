@@ -82,3 +82,4 @@ gem 'ransack'
 gem 'public_activity', github: 'chaps-io/public_activity', branch: 'master'
 gem "rolify"
 gem "pundit"
+gem 'exception_notification'
