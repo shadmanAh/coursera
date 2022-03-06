@@ -4,7 +4,8 @@ class Course < ApplicationRecord
 
   belongs_to :user
   has_many :lessons, dependent: :destroy
-
+  has_many :enrollments
+  
   def to_s
     title
   end
