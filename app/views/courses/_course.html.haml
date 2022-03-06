@@ -15,7 +15,7 @@
           = course.level 
   .card-footer 
     .text-center
-      = number_to_currency(course.price) 
+      = enrollment_button(course)
   .card-footer 
     .fa.fa-tasks
     = course.lessons.count
