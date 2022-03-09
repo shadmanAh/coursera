@@ -3,7 +3,21 @@
     .fa.fa-graduation-cap
     = link_to course.title, course_path(course) 
   .card-body 
-    %small= simple_format(course.short_description)
+    %small= simple_format(course.short_description) 
+  .card-footer 
+    .text-center
+      = enrollment_button(course)
+      .row
+      = review_button(course)
+  .card-footer
+    .row 
+      .col-md-6 
+        .fa.fa-tasks
+        = course.lessons.count
+      .col-md-6 
+        .text-right
+          .text-warning.fa.fa-star 
+          = course.average_rating 
   .card-footer 
     .row 
       .col-md-6 
@@ -12,15 +26,7 @@
       .col-md-6 
         .text-right
           .fa.fa-signal 
-          = course.level 
-  .card-footer 
-    .text-center
-      = enrollment_button(course)
-      .row
-      = review_button(course)
-  .card-footer 
-    .fa.fa-tasks
-    = course.lessons.count
+          = course.level
   .card-footer
     .row 
       .col-md-6
