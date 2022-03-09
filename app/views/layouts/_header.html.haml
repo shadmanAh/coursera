@@ -40,9 +40,13 @@
               .fa.fa-graduation-cap
               Learn
             .dropdown-menu.dropdown-meun-right{"aria-labelledby" => "studentDropdown"}
-              -# = link_to new_course_path, class: "dropdown-item" do 
-              -#   .fa.fa-plus
-              -#   %b New Course
+              = link_to purchased_courses_path, class: "dropdown-item" do 
+                .fa.fa-graduation-cap
+                %b Purchased Courses
+              = link_to pending_review_courses_path, class: "dropdown-item" do 
+                .fa.fa-star
+                %b Pending Review
+
         
         - if current_user.has_role?(:teacher)
           %li.nav-item.dropdown
@@ -53,6 +57,12 @@
               = link_to new_course_path, class: "dropdown-item" do 
                 .fa.fa-plus
                 %b New Course 
+              = link_to created_courses_path, class: "dropdown-item" do 
+                .fa.fa-graduation-cap
+                %b My courses
+              = link_to my_students_enrollments_path, class: "dropdown-item" do 
+                .fa.fa-users
+                %b My students
 
         - if current_user.has_role?(:admin)
           %li.nav-item.dropdown
