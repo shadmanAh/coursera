@@ -10,14 +10,16 @@
       .row
       = review_button(course)
   .card-footer
-    .row 
-      .col-md-6 
-        .fa.fa-tasks
-        = course.lessons.count
-      .col-md-6 
-        .text-right
-          .text-warning.fa.fa-star 
-          = course.average_rating 
+    .text-warning.fa.fa-star 
+    = course.average_rating 
+    -# Enrollments count:
+    -# = course.enrollments.count 
+    Counter cache enrollments count:
+    = course.enrollments_count 
+  .card-footer
+    .fa.fa-tasks
+    = course.lessons.count
+          
   .card-footer 
     .row 
       .col-md-6 
