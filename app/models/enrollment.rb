@@ -5,8 +5,8 @@ class Enrollment < ApplicationRecord
   # User.find_each { |user| User.reset_counters(user.id, :enrollments) }
   validates :user, :course, presence: true 
 
-  validates_uniqueness_of :rating, if: :review?
-  validates_uniqueness_of :review, if: :rating?
+  # validates_uniqueness_of :rating, if: :review?
+  # validates_uniqueness_of :review, if: :rating?
 
 
   validates_uniqueness_of :user_id, scope: :course_id  # user cant be subscribed to the same course twice

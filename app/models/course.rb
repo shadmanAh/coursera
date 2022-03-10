@@ -6,6 +6,8 @@ class Course < ApplicationRecord
   # User.find_each { |user| User.reset_counters(user.id, :courses) }
   has_many :lessons, dependent: :destroy
   has_many :enrollments
+
+  validates :title, uniqueness: true 
   
   def to_s
     title

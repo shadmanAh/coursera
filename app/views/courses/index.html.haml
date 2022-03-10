@@ -1,10 +1,12 @@
 - content_for :title do 
   Coursera 
   \|
-  All courses
+  = action_name.humanize 
+  courses 
 
 %h2
   .text-center
+    = action_name.humanize 
     Courses 
     .badge.badge-info 
       = @courses.count
