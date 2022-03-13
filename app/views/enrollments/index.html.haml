@@ -82,7 +82,7 @@
               = link_to 'Add Review', edit_enrollment_path(enrollment)
           %td
             - if policy(enrollment).destroy?
-              = link_to 'Delete Enrollment', enrollment, method: :delete, data: { confirm: 'Are you sure?' }
+              = button_to 'Delete Enrollment', enrollment, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
