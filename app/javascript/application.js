@@ -6,3 +6,5 @@ import * as bootstrap from "bootstrap";
 import "trix"
 import "@rails/actiontext"
 // import "trix/dist/trix"
+import "chartkick"
+import "Chart.bundle"

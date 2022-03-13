@@ -10,3 +10,5 @@ pin "bootstrap", to: "https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/boots
 pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.2/lib/index.js"
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
+pin "chartkick", to: "chartkick.js"
+pin "Chart.bundle", to: "Chart.bundle.js"
