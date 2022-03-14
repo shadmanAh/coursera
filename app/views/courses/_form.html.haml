@@ -13,7 +13,9 @@
     = f.input :language, collection: Course.languages, include_blank: true
     -# = f.input :level, collection: ["Beginner", "Intermediate", "Advanced"]
     = f.input :level, collection: Course.levels, include_blank: true
-    = f.input :price 
+    = f.input :price
+    %p
+    = f.input :published 
 
   .form-actions
     = f.button :submit

@@ -78,6 +78,11 @@
               .fa.fa-cog
               Admin
             .dropdown-menu.dropdown-meun-right{"aria-labelledby" => "adminDropdown"}
+              = link_to unapproved_courses_path, class: "dropdown-item" do 
+                .fa.fa-graduation-cap
+                %b Unapproved courses
+                .badge.badge-danger
+                  = Course.unapproved.count 
               = link_to users_path, class: "dropdown-item" do 
                 .fa.fa-users
                 %b Users 
