@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   skip_before_action :authenticate_user!, :only => [:show]
-  before_action :set_course, only: %i[ show edit update destroy approve unapprove ]
+  before_action :set_course, only: %i[ show edit update destroy approve unapprove analytics ]
 
   def index
     # if params[:title]
@@ -55,6 +55,10 @@ class CoursesController < ApplicationController
     authorize @course, :approve?
     @course.update_attribute(:approved, false)
     redirect_to @course, notice: "Course unapproved and hidden!"
+  end
+
+  def analytics
+    authorize @course, :owner?
   end
 
   def show

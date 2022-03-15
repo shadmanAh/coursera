@@ -66,6 +66,8 @@
   .card-columns 
     - @purchased_courses.each do |course|
       = render 'courses/course', course: course 
+  .text-right 
+    = link_to 'All my purchased courses', purchased_courses_path 
 
 %hr
 %h2
@@ -74,6 +76,8 @@
 .card-columns 
   - @popular.each do |course|
     = render 'courses/course', course: course 
+.text-right 
+  = link_to 'More popular courses', courses_path(courses_search: {s: 'enrollments_count desc'})
 
 %hr
 %h2
@@ -82,6 +86,8 @@
 .card-columns 
   - @top_rated.each do |course|
     = render 'courses/course', course: course 
+.text-right 
+  = link_to 'Best rated courses', courses_path(courses_search: {s: 'average_rating desc'})
 
 %hr
 %h2
@@ -90,6 +96,8 @@
 .card-columns 
   - @latest.each do |course|
     = render 'courses/course', course: course 
+.text-right 
+  = link_to 'More new courses', courses_path(courses_search: {s: 'created_at desc'})
 
 %hr
 %h2
