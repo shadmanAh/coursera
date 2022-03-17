@@ -36,10 +36,11 @@
       .float-right 
         .fa.fa-spinner 
         = number_to_percentage(@course.progress(current_user), precision: 0)
-    %ul.list-group 
+    %ul.list-group.lesson-sortable
       - @lessons.each do |lesson|
-        %li.list-group-item
-          = render 'lessons/lesson_preview', lesson: lesson
+        = content_tag "div", id: "lesson-#{lesson.id}", data: { model_name: lesson.class.name.underscore, update_url: course_lesson_sort_path(@course, lesson) } do 
+          %li.list-group-item
+            = render 'lessons/lesson_preview', lesson: lesson
     .p-4
 
     %h3 
@@ -55,3 +56,27 @@
     .sticky-top
       = render 'courses/course', course: @course
     %p
+
+
+-# %ul.sortable
+-#   %li.ui-state-default
+-#     %span.ui-icon.ui-icon-arrowthick-2-n-s>
+-#     Item 1
+-#   %li.ui-state-default
+-#     %span.ui-icon.ui-icon-arrowthick-2-n-s>
+-#     Item 2
+-#   %li.ui-state-default
+-#     %span.ui-icon.ui-icon-arrowthick-2-n-s>
+-#     Item 3
+-#   %li.ui-state-default
+-#     %span.ui-icon.ui-icon-arrowthick-2-n-s>
+-#     Item 4
+-#   %li.ui-state-default
+-#     %span.ui-icon.ui-icon-arrowthick-2-n-s>
+-#     Item 5
+-#   %li.ui-state-default
+-#     %span.ui-icon.ui-icon-arrowthick-2-n-s>
+-#     Item 6
+-#   %li.ui-state-default
+-#     %span.ui-icon.ui-icon-arrowthick-2-n-s>
+-#     Item 7

@@ -19,7 +19,9 @@ Rails.application.routes.draw do
       get :unapprove
     end
     get :purchased, :pending_review, :created, :unapproved, on: :collection
-    resources :lessons
+    resources :lessons do 
+      put :sort
+    end
     resources :enrollments, only: [:new, :create]
   end
   resources :users, only: [:index, :edit, :show, :update]
