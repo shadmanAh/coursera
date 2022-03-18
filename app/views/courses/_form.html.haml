@@ -8,9 +8,13 @@
     %br
     = f.label :avatar
     .row
-    = f.file_field :avatar
     - if @course.avatar.attached?
       = image_tag @course.avatar, width: "200px";
+      .row
+      = @course.avatar.filename 
+    .row
+    = f.file_field :avatar
+    %small= f.error :avatar, class: 'text-danger'
     .row
     = f.label :description
     = f.rich_text_area :description
