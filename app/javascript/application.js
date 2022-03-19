@@ -9,6 +9,8 @@ import "@rails/actiontext"
 import "chartkick"
 import "Chart.bundle"
 
+import "./controllers/trix-editor-overrides"
+
 import "./controllers/jquery-ui"
 
 $( function(){                               // document).on('turbolinks:load',
