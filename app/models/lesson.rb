@@ -17,6 +17,11 @@ class Lesson < ApplicationRecord
     content_type: ['image/png', 'image/jpg', 'image/jpeg'], 
     size: { less_than: 10.megabytes , message: 'is too large' }
 
+    # validates :video_thumbnail, presence: true, if: :video_present?
+    # def video_present?
+    #   self.video.present?
+    # end
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
