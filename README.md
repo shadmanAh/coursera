@@ -42,6 +42,7 @@ rails s
 - Ruby v 3.0.2
 - Ruby on Rails 7.0.2
 - HTML 5
+- Haml
 - CSS
 - Bootstrap
 - JavaScript
