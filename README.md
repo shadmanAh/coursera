@@ -2,7 +2,7 @@
 
 ![This is an image](https://github.com/shadmanAh/coursera/blob/main/coursera.png)
 
-# Entity-Relationship Diagram
+# Relationship Diagram
 
 ![This is an image](https://github.com/shadmanAh/coursera/blob/main/coursera_model.png)
 
