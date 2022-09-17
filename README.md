@@ -6,6 +6,10 @@
 
 ![This is an image](https://github.com/shadmanAh/coursera/blob/main/coursera_model.png)
 
+## Sample analysis page:
+
+![This is an image](https://github.com/shadmanAh/coursera/blob/main/course_chart.png)
+
 **Installation Requirements**
 
 - ruby v 3.0.2 +
